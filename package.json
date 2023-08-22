@@ -1,0 +1,53 @@
+{
+    "name": "todosofmine",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "preview": "vite preview",
+        "build": "tsc && vite build",
+        "format": "prettier --write \".\"",
+        "format:src": "prettier --write \"src/**/*.{ts,tsx}\"",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "build:sass": "sass --no-source src/style/main.scss  src/style/main.css"
+    },
+    "dependencies": {
+        "@fvilers/disable-react-devtools": "^1.3.0",
+        "@tippyjs/react": "^4.2.6",
+        "axios": "^1.4.0",
+        "crypto-js": "^4.1.1",
+        "formik": "^2.4.3",
+        "framer-motion": "^10.16.1",
+        "i18next": "^23.4.4",
+        "i18next-browser-languagedetector": "^7.1.0",
+        "i18next-http-backend": "^2.2.1",
+        "lottie-react": "^2.4.0",
+        "nanoid": "^4.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-i18next": "^13.1.2",
+        "react-query": "^3.39.3",
+        "react-router-dom": "^6.15.0",
+        "react-toastify": "^9.1.3",
+        "tippy.js": "^6.3.7",
+        "yup": "^1.2.0",
+        "zustand": "^4.4.1"
+    },
+    "devDependencies": {
+        "@types/crypto-js": "^4.1.1",
+        "@types/node": "^20.5.2",
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "@vitejs/plugin-react": "^4.0.3",
+        "eslint": "^8.45.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.3",
+        "prettier": "^3.0.2",
+        "sass": "^1.66.1",
+        "typescript": "^5.1.6",
+        "vite": "^4.4.5"
+    }
+}

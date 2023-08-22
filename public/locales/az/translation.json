@@ -1,0 +1,44 @@
+{
+    "sign": {
+        "head": {
+            "login": "Xoş gəlmisiniz",
+            "register": "Salamlar"
+        },
+        "button": {
+            "login": "Daxil ol",
+            "register": "Qeydiyyatdan keçin"
+        },
+        "username": {
+            "hint": "İstifadəçi adınızı daxil edin",
+            "error": {
+                "required": "İstifadəçi adı vacibdir"
+            }
+        },
+        "password": {
+            "hint": "Parolunuzu daxil edin",
+            "error": {
+                "required": "Parol vacibdir",
+                "min": "minimum $ simvol uzunluğunda olmalıdır",
+                "match": "Parol sahəsində böyük hərf və rəqəmsal simvolların ən azı bir dəfə istifadə olunması lazımdır."
+            }
+        },
+        "confirm": {
+            "hint": "Parolu təsdiqləyin",
+            "error": {
+                "required": "Parolu təsdiqləmək vacibdir",
+                "same": "Təsdiq xanası parol ilə eyni olmalıdır"
+            }
+        },
+        "link": {
+            "login": "Hesabınız yoxdur?",
+            "register": "Artıq hesabınız var?"
+        }
+    },
+    "sidebar": {
+        "out": "Çıxış et",
+        "setting": {
+            "setting": "Tənzimləmələr"
+        }
+    },
+    "underConstruction": "Bu səhifə inşa edilməkdədir"
+}

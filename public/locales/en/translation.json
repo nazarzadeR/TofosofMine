@@ -1,0 +1,51 @@
+{
+    "sign": {
+        "head": {
+            "login": "Welcome",
+            "register": "Greeting"
+        },
+        "button": {
+            "login": "Login",
+            "register": "Register"
+        },
+        "username": {
+            "hint": "Enter your username",
+            "error": {
+                "required": "Username must be required"
+            }
+        },
+        "password": {
+            "hint": "Enter your password",
+            "error": {
+                "required": "Password must be required",
+                "min": "must be minimum $ character long",
+                "match": "The password field must be used with capital and numeric characters at least once."
+            }
+        },
+        "confirm": {
+            "hint": "Confirm password",
+            "error": {
+                "required": "Confirm password must be required",
+                "same": "The confirm filed must be same as password"
+            }
+        },
+        "link": {
+            "login": "Don't have a account?",
+            "register": "Already have a account?"
+        }
+    },
+    "sidebar": {
+        "out": "Logout",
+        "setting": {
+            "setting": "Settings"
+        }
+    },
+    "warnings": {
+        "BACKEND_NOT_UP": "Please wait a little bit until backend is up"
+    },
+    "errors": {
+        "USER_NOT_FOUND": "Username or password incorrect",
+        "SOMETHING_GONE_WRONG": "Unknown error occurred"
+    },
+    "underConstruction": "This page is under construction"
+}

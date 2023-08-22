@@ -1,0 +1,25 @@
+{
+    "short_name": "TodosOfMine",
+    "name": "TodosOfMine: Can I work or do something with planned",
+    "icons": [
+        {
+            "src": "/brand/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/brand/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#1a202c",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#1a202c",
+    "shortcuts": [],
+    "description": "Todos for create creativity your daily life",
+    "screenshots": []
+}
