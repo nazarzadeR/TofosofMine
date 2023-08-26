@@ -14,7 +14,7 @@ export function changeHeaderThemeColorAttr(hexColor: string) {
 export function changeThemeAttr(theme: string) {
     if (!isDocument) return
 
-    document.documentElement.setAttribute('data-theme', theme)
+    document.documentElement.setAttribute('class', theme)
 }
 
 export function detectMobileDevice() {

@@ -11,7 +11,7 @@ const Home = lazy(() => import('@/pages/home'))
 const NotFound = lazy(() => import('@/pages/not-found'))
 const Unauthorized = lazy(() => import('@/pages/unauthorized'))
 
-const RoutesManager = () => {
+const AppRoutes = () => {
     const { ADMIN, USER, SUPER_USER } = Roles
 
     return (
@@ -42,4 +42,4 @@ const RoutesManager = () => {
     )
 }
 
-export default RoutesManager
+export default AppRoutes

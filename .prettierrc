@@ -4,5 +4,10 @@
     "useTabs": false,
     "singleQuote": true,
     "trailingComma": "es5",
-    "jsxSingleQuote": true
+    "jsxSingleQuote": true,
+    "tailwindConfig": "./tailwind.config.js",
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ]
 }
+    
