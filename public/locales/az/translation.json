@@ -4,6 +4,12 @@
             "login": "Xoş gəlmisiniz",
             "register": "Salamlar"
         },
+        "info": {
+            "login": {
+                "head": "İşinizə və həyatınıza nizam gətirin.",
+                "body": "TodosOfMine ilə diqqəti, təşkilatçılığı və əmin-amanlığı hiss edin."
+            }
+        },
         "button": {
             "login": "Daxil ol",
             "register": "Qeydiyyatdan keçin"

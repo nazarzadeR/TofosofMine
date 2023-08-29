@@ -4,6 +4,12 @@
             "login": "Welcome",
             "register": "Greeting"
         },
+        "info": {
+            "login": {
+                "head": "Bring order to your work and life.",
+                "body": "Experience focus, organization, and tranquility with TodosOfMine"
+            }
+        },
         "button": {
             "login": "Login",
             "register": "Register"
@@ -31,7 +37,8 @@
         },
         "link": {
             "login": "Don't have a account?",
-            "register": "Already have a account?"
+            "register": "Already have a account?",
+            "forgot": "Forgot your password?"
         }
     },
     "sidebar": {

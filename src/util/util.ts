@@ -1,15 +1,5 @@
 import * as yup from 'yup'
 
-export function combineClassnames(
-    defaults: string,
-    classes: string | string[]
-) {
-    if (Array.isArray(classes)) {
-        classes = classes.join(' ')
-    }
-    return defaults + ' ' + classes
-}
-
 export function mergeSchemas(...schemas: yup.AnyObject[]) {
     const [first, ...rest] = schemas
 

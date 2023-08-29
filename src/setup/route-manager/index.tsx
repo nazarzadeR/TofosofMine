@@ -10,27 +10,27 @@ const Sign = lazy(() => import('@/pages/sign'))
 const Home = lazy(() => import('@/pages/home'))
 const NotFound = lazy(() => import('@/pages/not-found'))
 const Unauthorized = lazy(() => import('@/pages/unauthorized'))
+const UnderConstruction = lazy(() => import('@/pages/under-construction'))
 
 const AppRoutes = () => {
     const { ADMIN, USER, SUPER_USER } = Roles
 
     return (
         <Routes>
-            <Route path='login' element={<SuspenseLoader comp={<Sign />} />} />
-            {/* <Route
-                path='register'
-                element={<SuspenseLoader comp={<Sign register />} />}
-            /> */}
+            <Route path='auth' element={<SuspenseLoader comp={<Sign />} />} />
             <Route path='/'>
                 <Route index element={<Navigate to='app' />} />
                 <Route
                     path='home'
-                    element={<SuspenseLoader comp={<Home />} />}
+                    element={<SuspenseLoader comp={<UnderConstruction />} />}
                 />
             </Route>
 
             <Route path='app' element={<Auth everyone />}>
-                <Route index element={<SuspenseLoader comp={<App />} />} />
+                <Route
+                    index
+                    element={<SuspenseLoader comp={<UnderConstruction />} />}
+                />
             </Route>
 
             <Route

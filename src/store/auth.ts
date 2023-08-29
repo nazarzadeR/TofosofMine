@@ -46,6 +46,10 @@ const useAuth = create<Store>((set, get) => ({
 
         const token = getToken()
 
+        if (token.length === 0) {
+            return set({ checked: true, isPersisting: false })
+        }
+
         const access_token = await refresh(token)
 
         if (typeof access_token !== 'string') {

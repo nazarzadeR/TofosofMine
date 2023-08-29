@@ -1,7 +1,15 @@
 import React from 'react'
 
-const App = () => {
-    return <div>App</div>
-}
+import AppPage from './AppPage'
+import Sidebar from './layout/sidebar'
+
+const App = () => (
+    <div className='app'>
+        <Sidebar />
+        <main className='content'>
+            <AppPage />
+        </main>
+    </div>
+)
 
 export default App

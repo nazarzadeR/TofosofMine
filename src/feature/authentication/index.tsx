@@ -40,7 +40,7 @@ const Auth: React.FC<Props> = (props) => {
     ) : hasMeta('id') ? (
         <Navigate to='/unauthorized' />
     ) : (
-        <Navigate to='/login' state={{ location }} />
+        <Navigate to='/auth' state={{ location }} />
     )
 }
 
