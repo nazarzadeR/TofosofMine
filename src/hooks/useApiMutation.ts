@@ -57,7 +57,7 @@ const useApiMutation = <T = Record<string, any>>(
         ...options,
         // * For Errors onerror not fired
         onSettled(res) {
-            if (res && 'errorCode' in res.data) {
+            if (res && res.data?.errorCode ) {
                 const errorName = `errors.${res.data.errorCode}`
                 const translateStr = t(`errors.${res.data.errorCode}`)
 

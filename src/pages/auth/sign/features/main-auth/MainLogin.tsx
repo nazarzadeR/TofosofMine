@@ -9,20 +9,14 @@ import { useGlobals } from '@/context'
 import useSignType from '../../store/sign-type'
 import useApiMutation from '@/hooks/useApiMutation'
 import { LoginSchema } from '../../schema/sign-schema'
-import {
-    Button,
-    LockIcon,
-    UserIcon,
-    BeatLoader,
-    InputField,
-} from '@/components'
+import { UserIcon, Button, LockIcon, InputField } from '@/components'
 
 const LoginForm = () => {
     const { isUp } = useGlobals()
     const { t } = useTranslation()
     const navigate = useNavigate()
-    const { goRegister } = useSignType()
     const { setAuthWithTokens } = useAuth()
+    const { goRegister, setRESET, setOTHER } = useSignType()
     const loginMutation = useApiMutation<AppMeta.TSign>({
         fn: login,
     })
@@ -80,21 +74,28 @@ const LoginForm = () => {
                         Icon={<LockIcon />}
                     />
 
-                    <p
-                        onClick={goRegister}
-                        className='ml-2 cursor-pointer text-teal-400'
-                    >
-                        {t('sign.link.forgot')}
-                    </p>
+                    <div className='flex max-w-full gap-10'>
+                        <p
+                            onClick={setRESET}
+                            className='ml-2 cursor-pointer text-teal-500'
+                        >
+                            {t('sign.link.forgot')}
+                        </p>
+
+                        <p
+                            onClick={setOTHER}
+                            className='cursor-pointer pr-2 text-teal-500'
+                        >
+                            {t('sign.link.otherWays')}
+                        </p>
+                    </div>
 
                     <Button
                         type='submit'
-                        className='w-80'
-                        disabled={!isUp}
+                        className='w-60'
                         tooltip={showTooltip}
-                        Loader={<BeatLoader />}
                         loading={ctx.isSubmitting}
-                        style={{ alignSelf: 'center' }}
+                        disabled={!isUp || !ctx.isValid}
                     >
                         {t('sign.button.login')}
                     </Button>
@@ -103,7 +104,7 @@ const LoginForm = () => {
                         {t('sign.link.login')}
                         <span
                             onClick={goRegister}
-                            className='cursor-pointer text-teal-400'
+                            className='cursor-pointer text-teal-500'
                         >
                             &nbsp; {t('sign.button.register')}
                         </span>

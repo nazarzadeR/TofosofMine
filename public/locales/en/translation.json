@@ -8,11 +8,23 @@
             "login": {
                 "head": "Bring order to your work and life.",
                 "body": "Experience focus, organization, and tranquility with TodosOfMine"
+            },
+            "reset": {
+                "body": "To reset your password, please enter your email address."
+            },
+            "other": {
+                "head": "Select login type",
+                "magic": {
+                    "head": "Login with email",
+                    "body": "Enter the email address associated with your account, and we'll send a magic link to your inbox"
+                }
             }
         },
         "button": {
             "login": "Login",
-            "register": "Register"
+            "register": "Register",
+            "reset": "Reset my password",
+            "magic": "Send magic link"
         },
         "username": {
             "hint": "Enter your username",
@@ -28,6 +40,13 @@
                 "match": "The password field must be used with capital and numeric characters at least once."
             }
         },
+        "email": {
+            "hint": "Enter your email address",
+            "error": {
+                "required": "Email address must be filled",
+                "notMatches": "It seems like you didn't type the correct email address."
+            }
+        },
         "confirm": {
             "hint": "Confirm password",
             "error": {
@@ -36,9 +55,12 @@
             }
         },
         "link": {
+            "magic": "Return to",
+            "goLogin": "Back to",
+            "otherWays": "Other ways",
             "login": "Don't have a account?",
-            "register": "Already have a account?",
-            "forgot": "Forgot your password?"
+            "forgot": "Forgot your password?",
+            "register": "Already have a account?"
         }
     },
     "sidebar": {

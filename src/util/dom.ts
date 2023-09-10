@@ -1,7 +1,8 @@
 export const pass = () => null
-export const isBrowser = typeof window !== 'undefined'
-export const isNavigator = typeof navigator !== 'undefined'
-export const isDocument = typeof document !== 'undefined'
+export const hasBrowser = typeof window !== 'undefined'
+export const hasDocument = typeof document !== 'undefined'
+export const hasNavigator = typeof navigator !== 'undefined'
+export const hasLocation = typeof window.location !== 'undefined'
 
 export function changeHeaderThemeColorAttr(hexColor: string) {
     const metaTag = document.querySelector('meta[name="theme-color"]')
@@ -12,13 +13,23 @@ export function changeHeaderThemeColorAttr(hexColor: string) {
 }
 
 export function changeThemeAttr(theme: string) {
-    if (!isDocument) return
+    if (!hasDocument) return
 
     document.documentElement.setAttribute('class', theme)
 }
 
+export function getSearchParamsFromUrl(param: string) {
+    if (!hasLocation) return
+
+    const query = window.location.search
+    const urlParams = new URLSearchParams(query)
+    const codeParam = urlParams.get(param)
+
+    return codeParam
+}
+
 export function detectMobileDevice() {
-    if (!isNavigator) return false
+    if (!hasNavigator) return false
 
     const mobileDeviceKeywords = [
         /Android/i,

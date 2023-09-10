@@ -93,18 +93,17 @@ const SimpleRegisterComponent = () => {
 
                     <p
                         onClick={goLogin}
-                        className='ml-2 cursor-pointer text-teal-400'
+                        className='ml-2 cursor-pointer text-teal-500'
                     >
                         {t('sign.link.register')}
                     </p>
 
                     <Button
                         type='submit'
-                        disabled={!isUp}
                         tooltip={showTooltip}
-                        Loader={<BeatLoader />}
                         loading={ctx.isSubmitting}
-                        className='w-80 self-center'
+                        className='w-60 self-center'
+                        disabled={!isUp || !ctx.isValid}
                     >
                         {t('sign.button.register')}
                     </Button>

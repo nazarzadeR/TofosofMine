@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
 
 :root {
     --toastify-color-light: rgb(244 246 248);
@@ -26,23 +28,15 @@
 }
 
 @layer components {
-    /* Pages */
-    .app {
-        @apply flex h-full w-full;
-    }
 
-    .content {
-        @apply flex-1;
-    }
 
     /* Components */
-    .input_error > div:first-child {
-        @apply outline outline-2  outline-light-danger dark:outline-dark-danger;
+    .input_error>div:first-child {
+        @apply outline outline-2 outline-light-danger dark:outline-dark-danger;
     }
 
     .input_focus {
-        @apply !bg-light-primary outline outline-2
-            outline-teal-400  dark:!bg-dark-primary dark:outline-teal-400;
+        @apply !bg-light-primary outline outline-2 outline-teal-400 dark:!bg-dark-primary dark:outline-teal-400;
     }
 
     /* Utilities  */
@@ -54,12 +48,15 @@
     .primary {
         @apply bg-light-primary dark:bg-dark-primary;
     }
+
     .secondary {
         @apply bg-light-secondary dark:bg-dark-secondary;
     }
+
     .info {
         @apply bg-light-info dark:bg-dark-info;
     }
+
     .warning {
         @apply bg-light-warning dark:bg-dark-warning;
     }
@@ -67,19 +64,16 @@
     .success {
         @apply bg-light-success dark:bg-dark-success;
     }
+
     .danger {
         @apply bg-light-danger dark:bg-dark-danger;
     }
+
     .accent {
         @apply bg-light-accent dark:bg-dark-accent;
     }
+
     .text {
         @apply bg-light-text dark:bg-dark-text;
-    }
-}
-
-@layer utilities {
-    .onFocusHideLabelSibling:is(:focus-within, :focus) + label {
-        display: none;
     }
 }

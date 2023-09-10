@@ -1,5 +1,8 @@
 import React, { ButtonHTMLAttributes } from 'react'
 import Tippy from '@tippyjs/react'
+import { twMerge } from 'tailwind-merge'
+
+import { BeatLoader } from '@/components'
 
 type Props = TDetailedComponent<
     {
@@ -20,14 +23,11 @@ const Button: React.FC<Props> = ({
     loading = false,
     ...rest
 }) => {
-    const showTooltip =
-        tooltip === undefined ? (
-            tooltip
-        ) : (
-            <div className='rounded-md bg-teal-500 px-1 py-[2px] text-sm'>
-                {tooltip}
-            </div>
-        )
+    const showTooltip = tooltip && (
+        <div className='rounded-md bg-teal-500 px-1 py-[2px] text-sm'>
+            {tooltip}
+        </div>
+    )
 
     return (
         <Tippy content={showTooltip}>
@@ -36,8 +36,7 @@ const Button: React.FC<Props> = ({
                     data-type={variant}
                     data-tooltip-content={tooltip}
                     data-tooltip-id='button-tooltip'
-                    className='min-w-p[60px] secondary hover:perspective-[500px] transform-[preserve-3d] min-h-[35px] w-[80%] cursor-pointer select-none rounded-md border-none px-[1rem]
-                    py-[.6rem] text-center text-[1.1rem] text-light-text decoration-transparent duration-100 backface-hidden hover:scale-105 dark:text-dark-text'
+                    className={twMerge("min-w-p[60px] secondary hover:perspective-[500px] transform-[preserve-3d] min-h-[35px] w-[80%] cursor-pointer select-none rounded-md border-none px-[1rem] py-[.6rem] text-center text-[1.1rem] text-light-text decoration-transparent  duration-100 backface-hidden enabled:hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40 dark:text-dark-text", className)}
                     {...rest}
                 >
                     {!loading ? (
@@ -45,8 +44,7 @@ const Button: React.FC<Props> = ({
                     ) : Loader ? (
                         Loader
                     ) : (
-                        // <SimpleLoader />
-                        <></>
+                        <BeatLoader />
                     )}
                 </button>
             </span>

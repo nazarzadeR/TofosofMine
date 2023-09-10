@@ -8,10 +8,22 @@
             "login": {
                 "head": "İşinizə və həyatınıza nizam gətirin.",
                 "body": "TodosOfMine ilə diqqəti, təşkilatçılığı və əmin-amanlığı hiss edin."
+            },
+            "reset": {
+                "body": "Şifrənizi sıfırlamaq üçün e-poçt ünvanınızı daxil edin"
+            },
+            "other": {
+                "head": "Giriş növünü seçin",
+                "magic": {
+                    "head": "E-poçt ilə giriş edin",
+                    "body": "Hesabınıza əlaqəli e-poçt ünvanınızı daxil edin, və biz sizin e-poçt qutunuza bir link göndərəcəyik"
+                }
             }
         },
         "button": {
             "login": "Daxil ol",
+            "magic": "Linki göndər",
+            "reset": "Şifrəmi yenilə",
             "register": "Qeydiyyatdan keçin"
         },
         "username": {
@@ -28,6 +40,13 @@
                 "match": "Parol sahəsində böyük hərf və rəqəmsal simvolların ən azı bir dəfə istifadə olunması lazımdır."
             }
         },
+        "email": {
+            "hint": "E-poçt ünvanınızı daxil edin",
+            "error": {
+                "required": "E-poçt ünvanı doldurulmalıdır",
+                "notMatches": "Siz düzgün e-poçt ünvanı daxil etməmisiniz kimi görünür."
+            }
+        },
         "confirm": {
             "hint": "Parolu təsdiqləyin",
             "error": {
@@ -36,8 +55,12 @@
             }
         },
         "link": {
+            "magic": "Qayıtmaq üçün",
+            "goLogin": "Girişə qayıt",
+            "otherWays": "Digər yollar",
             "login": "Hesabınız yoxdur?",
-            "register": "Artıq hesabınız var?"
+            "register": "Artıq hesabınız var?",
+            "forgot": "Şifrənizi unutmusunuz?"
         }
     },
     "sidebar": {
@@ -45,6 +68,13 @@
         "setting": {
             "setting": "Tənzimləmələr"
         }
+    },
+    "warnings": {
+        "BACKEND_NOT_UP": "Zəhmət olmasa bir az gözləyin, backend hazır olana qədər"
+    },
+    "errors": {
+        "USER_NOT_FOUND": "İstifadəçi adı və ya şifrə səhvdir",
+        "SOMETHING_GONE_WRONG": "Naməlum səhv baş verdi"
     },
     "underConstruction": "Bu səhifə inşa edilməkdədir"
 }

@@ -4,9 +4,9 @@ import AppPage from './AppPage'
 import Sidebar from './layout/sidebar'
 
 const App = () => (
-    <div className='app'>
+    <div className='flex h-full w-full relative'>
         <Sidebar />
-        <main className='content'>
+        <main className='flex-1'>
             <AppPage />
         </main>
     </div>

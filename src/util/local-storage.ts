@@ -1,8 +1,8 @@
-import { isBrowser } from './dom'
+import { hasBrowser } from './dom'
 
 export function getDefaultBrowserThemePreference() {
     if (
-        isBrowser &&
+        hasBrowser &&
         window.matchMedia &&
         window.matchMedia('(prefers-color-scheme: dark)').matches
     )
@@ -11,7 +11,7 @@ export function getDefaultBrowserThemePreference() {
     return 'light'
 }
 
-export function setLocalStorageToValue(
+export function setValueToLocalStorage(
     key: string,
     value: string,
     force = true

@@ -1,4 +1,5 @@
 import React, { useRef, useState, InputHTMLAttributes } from 'react'
+import { twMerge } from "tailwind-merge"
 import { FieldHookConfig, useField } from 'formik'
 
 import useInputFocus from './hooks/useInputFocus'
@@ -18,6 +19,7 @@ const InputFiled: React.FC<Props> = ({
     Icon,
     pwd,
     placeholder,
+    className = "",
     IconProps = {},
     ...rest
 }) => {
@@ -33,7 +35,10 @@ const InputFiled: React.FC<Props> = ({
     const changePassVisibility = () => setShowPwd((val) => !val)
 
     return (
-        <div role='group' className={`${errorOutlined} relative mx-[5px]`}>
+        <div
+            role='group'
+            className={twMerge(`${errorOutlined} relative mx-[5px]`, className)}
+        >
             <div
                 ref={wrapperRef}
                 className='secondary relative flex h-[48px] min-w-[260px] max-w-[320px] justify-between gap-0 rounded-md px-2 transition-[outline-color] duration-300'
@@ -51,14 +56,14 @@ const InputFiled: React.FC<Props> = ({
                         ref={inputRef}
                         autoComplete='off'
                         type={showPwd ? 'password' : 'text'}
-                        className='onFocusHideLabelSibling secondary m-0 h-full w-full border-none p-0 pt-1 text-light-primary outline-none dark:text-dark-text'
+                        className='peer secondary m-0 h-full w-full border-none p-0 pt-1 text-light-primary outline-none dark:text-dark-text'
                         {...field}
                         {...rest}
                     />
                     {meta.value.length <= 0 && placeholder && (
                         <label
                             htmlFor={rest.id || ''}
-                            className='absolute left-[10px] top-[50%] -translate-y-1/2 cursor-text tracking-wide'
+                            className='absolute peer-focus-within:hidden left-[10px] top-[50%] -translate-y-1/2 cursor-text tracking-wide'
                         >
                             {placeholder}
                         </label>

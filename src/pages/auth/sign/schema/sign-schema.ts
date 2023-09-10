@@ -5,6 +5,7 @@ import { mergeSchemas } from '@/util'
 
 // * minimum one uppercase, one lowercase, one special
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/
+// * email regex
 const emailRegex =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 

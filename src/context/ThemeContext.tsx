@@ -4,18 +4,18 @@ import { LOCAL_STORAGE_KEY_OF_THEME } from '@/data/constants'
 import {
     changeThemeAttr,
     getLocalStorageItem,
-    setLocalStorageToValue,
+    setValueToLocalStorage,
     changeHeaderThemeColorAttr,
     getDefaultBrowserThemePreference,
 } from '@/util'
 
 export const themeColors: AppContexts.TThemeColors = {
     dark: {
-        default: '#1a202c',
+        default: '#303642',
         op25: '#131821',
     },
     light: {
-        default: '#f5f5f5',
+        default: '#F4F6F8',
         op25: '#b7b7b7',
     },
 }
@@ -47,7 +47,7 @@ export function ThemeProvider(props: PropsWithChildren) {
         setTheme(() => newTheme)
         changeThemeAttr(newTheme)
         changeHeaderThemeColorAttr(themeColors[newTheme][attrOp])
-        setLocalStorageToValue(LOCAL_STORAGE_KEY_OF_THEME, newTheme)
+        setValueToLocalStorage(LOCAL_STORAGE_KEY_OF_THEME, newTheme)
     }
 
     function changeMetaAttr(add = true) {
