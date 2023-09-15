@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { PageLoader } from '@/components'
+import { PageLoader } from '@modules/common'
 import { loginWithGithub } from '../../services/api'
 
 const GithubForm = () => {

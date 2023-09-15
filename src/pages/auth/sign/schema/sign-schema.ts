@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 import { TFunction } from 'i18next'
 
-import { mergeSchemas } from '@/util'
+import { mergeSchemas } from '@modules/common'
 
 // * minimum one uppercase, one lowercase, one special
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/

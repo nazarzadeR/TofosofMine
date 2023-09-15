@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import AuthCard from './AuthCard'
 import useSignType from '../../../store/sign-type'
 import useOtherAuthType from '../store/other-auth-types'
-import { GithubIcon, GoogleIcon, MagicLinkIcon } from '@/components'
+import { GithubIcon, GoogleIcon, MagicLinkIcon } from '@modules/common'
 
 const AllAuthCard: React.FC<TComponent> = () => {
     const { t } = useTranslation()
@@ -15,7 +15,7 @@ const AllAuthCard: React.FC<TComponent> = () => {
     const cards = [
         { Icon: MagicLinkIcon, onEvent: () => setType('MAGIC') },
         { Icon: GithubIcon, onEvent: () => null }, //  setType('GITHUB') },
-        { Icon: GoogleIcon, onEvent: () => null} // setType('GOOGLE') },
+        { Icon: GoogleIcon, onEvent: () => null }, // setType('GOOGLE') },
     ]
 
     return (

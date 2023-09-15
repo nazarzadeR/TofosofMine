@@ -9,6 +9,15 @@ namespace AppContexts {
             isXL: boolean
             isXXL: boolean
         }
+        os?:
+            | {
+                  isMac: boolean
+                  version: string
+                  isLinux: boolean
+                  isWindows: boolean
+                  isFreeBSD: boolean
+              }
+            | ''
     }
 
     type ThemeOptions = 'light' | 'dark'

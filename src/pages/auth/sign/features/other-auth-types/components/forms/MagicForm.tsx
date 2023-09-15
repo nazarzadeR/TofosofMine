@@ -3,17 +3,16 @@ import { useNavigate } from 'react-router-dom'
 import { Formik, Form, FormikHelpers } from 'formik'
 import { useTranslation } from 'react-i18next'
 
-import useSignType from '../../store/sign-type'
-import {useApiMutation, useGlobals} from '@modules/common'
-import { UserEmailSchema } from '../../schema/sign-schema'
-import { Button, EMailIcon, Input } from '@modules/common'
+import useSignType from '@/pages/auth/sign/store/sign-type'
+import { UserEmailSchema } from '@/pages/auth/sign/schema/sign-schema'
+import { Button, EMailIcon, Input, useApiMutation, useGlobals } from '@modules/common'
 
-const ResetForm = () => {
+const MagicForm = () => {
     const { isUp } = useGlobals()
     const { t } = useTranslation()
     const navigate = useNavigate()
     const { setMAIN } = useSignType()
-    // const resetMutation = useApiMutation<{ email: string }>({
+    // const magicMutation = useApiMutation<{ email: string }>({
     //     fn: login,
     // })
 
@@ -23,14 +22,10 @@ const ResetForm = () => {
         _credential: { email: string },
         _helpers: FormikHelpers<{ email: string }>
     ) => {
-        // await resetMutation.mutateAsync(credential, {
+        // await magicMutation.mutateAsync(credential, {
         //     onSuccess(res) {
         //         if (res.status < 200 || res.status >= 300) return
-        //         setAuthWithTokens({
-        //             user: res.data.user,
-        //             ...res.data.tokens,
-        //         })
-        //         navigate('/app')
+        //
         //     },
         //     onSettled: (res) => {
         //         if (res && res?.status <= 400) return
@@ -47,14 +42,14 @@ const ResetForm = () => {
             validationSchema={UserEmailSchema(t)}
         >
             {(ctx) => (
-                <Form className='flex h-max w-max -translate-y-10 flex-col gap-5 max-xl:translate-y-0'>
+                <Form className='flex h-max w-max max-w-[360px] -translate-y-10 flex-col gap-5 max-xl:translate-y-0'>
                     <div className='flex flex-col gap-1 self-center'>
                         <h2 className='sm-lg:text-xl text-center text-3xl max-lg:text-2xl'>
-                            {t('sign.link.forgot')}
+                            {t('sign.info.other.magic.head')}
                         </h2>
 
                         <p className='self-center text-center text-sm text-gray-400'>
-                            {t('sign.info.reset.body')}
+                            {t('sign.info.other.magic.body')}
                         </p>
                     </div>
 
@@ -73,7 +68,7 @@ const ResetForm = () => {
                         loading={ctx.isSubmitting}
                         disabled={!isUp || !ctx.isValid}
                     >
-                        {t('sign.button.reset')}
+                        {t('sign.button.magic')}
                     </Button>
 
                     <p className='self-center text-gray-400'>
@@ -91,4 +86,4 @@ const ResetForm = () => {
     )
 }
 
-export default ResetForm
+export default MagicForm

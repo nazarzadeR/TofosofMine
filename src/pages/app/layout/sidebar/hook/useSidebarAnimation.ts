@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useAnimationControls } from 'framer-motion'
 
 import useSidebar from '../store/useSidebar'
-import { sidebarOpenAnimation } from '@/data/animationVariant'
 
 const useSidebarAnimation = () => {
     const { isOpen } = useSidebar()
@@ -17,6 +16,23 @@ const useSidebarAnimation = () => {
     }, [isOpen])
 
     return sidebarAnimationController
+}
+
+export const sidebarOpenAnimation: TAnimation = {
+    initial: {
+        width: '70px',
+        transition: {
+            duration: 0.4,
+            ease: 'easeInOut',
+        },
+    },
+    open: {
+        width: '280px',
+        transition: {
+            duration: 0.4,
+            ease: 'easeInOut',
+        },
+    },
 }
 
 export default useSidebarAnimation

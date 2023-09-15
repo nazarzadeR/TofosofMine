@@ -1,21 +1,26 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { Formik, Form, FormikHelpers } from 'formik'
-import { useTranslation } from 'react-i18next'
 
-import useAuth from '@/store/auth'
 import { login } from '@/service/api'
-import { useGlobals } from '@/context'
 import useSignType from '../../store/sign-type'
-import useApiMutation from '@/hooks/useApiMutation'
+import { useAuthStore } from '@modules/authentication'
 import { LoginSchema } from '../../schema/sign-schema'
-import { UserIcon, Button, LockIcon, InputField } from '@/components'
+import {
+    Input,
+    Button,
+    LockIcon,
+    UserIcon,
+    useGlobals,
+    useApiMutation,
+} from '@modules/common'
 
 const LoginForm = () => {
     const { isUp } = useGlobals()
     const { t } = useTranslation()
     const navigate = useNavigate()
-    const { setAuthWithTokens } = useAuth()
+    const { setAuthWithTokens } = useAuthStore()
     const { goRegister, setRESET, setOTHER } = useSignType()
     const loginMutation = useApiMutation<AppMeta.TSign>({
         fn: login,
@@ -59,14 +64,14 @@ const LoginForm = () => {
                         {t('sign.head.login')}
                     </h2>
 
-                    <InputField
+                    <Input
                         id='username'
                         name='username'
                         placeholder={t('sign.username.hint')}
                         Icon={<UserIcon />}
                     />
 
-                    <InputField
+                    <Input
                         pwd
                         id='password'
                         name='password'

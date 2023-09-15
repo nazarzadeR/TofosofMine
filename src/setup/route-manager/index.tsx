@@ -1,9 +1,8 @@
 import React, { lazy } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
-import { Auth } from '@/feature'
-import { Roles } from '@/data/constants'
-import { SuspenseLoader } from '@/components'
+import { SuspenseLoader } from '@modules/common'
+import { Roles, Auth } from '@modules/authentication'
 
 const App = lazy(() => import('@/pages/app'))
 const Home = lazy(() => import('@/pages/home'))

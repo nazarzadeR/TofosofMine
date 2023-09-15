@@ -3,7 +3,11 @@ import { ToastContainer } from 'react-toastify'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClientProvider, QueryClient } from 'react-query'
 
-import { GlobalProvider, ThemeProvider, UtilityProvider } from '@/context'
+import {
+    GlobalProvider,
+    ThemeProvider,
+    UtilityProvider,
+} from '@/modules/common'
 
 const queryClient = new QueryClient()
 

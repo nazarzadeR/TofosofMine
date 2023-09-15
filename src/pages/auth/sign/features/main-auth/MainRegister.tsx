@@ -3,30 +3,29 @@ import { useNavigate } from 'react-router-dom'
 import { Formik, Form, FormikHelpers } from 'formik'
 import { useTranslation } from 'react-i18next'
 
-import useAuth from '@/store/auth'
-import { useGlobals } from '@/context'
 import { register } from '@/service/api'
 import useSignType from '../../store/sign-type'
-import useApiMutation from '@/hooks/useApiMutation'
+import { useAuthStore } from '@modules/authentication'
 import { RegisterSchema } from '../../schema/sign-schema'
 import {
+    Input,
     Button,
     LockIcon,
     UserIcon,
-    BeatLoader,
-    InputField,
-} from '@/components'
+    useGlobals,
+    useApiMutation,
+} from '@modules/common'
 
 type TSignRegister = AppMeta.TSign & {
     confirm: string
 }
 
-const SimpleRegisterComponent = () => {
+const RegisterForm = () => {
     const { isUp } = useGlobals()
     const { t } = useTranslation()
     const navigate = useNavigate()
     const { goLogin } = useSignType()
-    const { setAuthWithTokens } = useAuth()
+    const { setAuthWithTokens } = useAuthStore()
     const registerMutation = useApiMutation<AppMeta.TSign>({
         fn: register,
     })
@@ -70,20 +69,20 @@ const SimpleRegisterComponent = () => {
                     <h2 className='sm-lg:text-xl text-center text-4xl max-lg:text-3xl'>
                         {t('sign.head.register')}
                     </h2>
-                    <InputField
+                    <Input
                         id='username'
                         name='username'
                         placeholder={t('sign.username.hint')}
                         Icon={<UserIcon />}
                     />
-                    <InputField
+                    <Input
                         pwd
                         id='password'
                         name='password'
                         placeholder={t('sign.password.hint')}
                         Icon={<LockIcon />}
                     />
-                    <InputField
+                    <Input
                         pwd
                         id='confirm'
                         name='confirm'
@@ -113,4 +112,4 @@ const SimpleRegisterComponent = () => {
     )
 }
 
-export default SimpleRegisterComponent
+export default RegisterForm

@@ -12,6 +12,10 @@ export default defineConfig({
                 find: '@',
                 replacement: path.resolve(__dirname, 'src'),
             },
+            {
+                find: '@modules',
+                replacement: path.resolve(__dirname, 'src/modules'),
+            },
         ],
     },
 })

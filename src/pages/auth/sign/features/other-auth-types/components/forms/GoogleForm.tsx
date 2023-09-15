@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PageLoader } from '@/components'
+import { PageLoader } from '@modules/common'
 import { useGoogleOneTapLogin } from '@react-oauth/google'
 import useOtherAuthType from '../../store/other-auth-types'
 
