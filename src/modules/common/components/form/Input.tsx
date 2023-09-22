@@ -55,7 +55,7 @@ const InputFiled: React.FC<Props> = ({
                         ref={inputRef}
                         autoComplete='off'
                         type={showPwd ? 'password' : 'text'}
-                        className='secondary peer m-0 h-full w-full border-none p-0 pt-1 text-light-primary outline-none dark:text-dark-text'
+                        className='secondary peer m-0 h-full w-full border-none p-0 pt-1 text-dark-primary outline-none dark:text-dark-text'
                         {...field}
                         {...rest}
                     />

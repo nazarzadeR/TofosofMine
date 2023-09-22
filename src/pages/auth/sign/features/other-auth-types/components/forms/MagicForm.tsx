@@ -5,7 +5,13 @@ import { useTranslation } from 'react-i18next'
 
 import useSignType from '@/pages/auth/sign/store/sign-type'
 import { UserEmailSchema } from '@/pages/auth/sign/schema/sign-schema'
-import { Button, EMailIcon, Input, useApiMutation, useGlobals } from '@modules/common'
+import {
+    Button,
+    EMailIcon,
+    Input,
+    useApiMutation,
+    useGlobals,
+} from '@modules/common'
 
 const MagicForm = () => {
     const { isUp } = useGlobals()

@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-
 const PageLoader = () => (
     <div className='wrapper flex items-center justify-center'>
         <div className='h-[48px] w-[48px] rounded-full text-gray-700 perspective-10 rotate-z-45'>
@@ -25,8 +24,6 @@ const PageLoader = () => (
     </div>
 )
 
-
-
 export const pageLoaderAnimation = {
     boxShadow: [
         '0.2em 0px 0 0px currentcolor',
@@ -45,6 +42,5 @@ export const pageLoaderAnimation = {
         repeat: Infinity,
     },
 }
-
 
 export default PageLoader

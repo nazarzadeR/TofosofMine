@@ -2,8 +2,11 @@ import { useEffect } from 'react'
 import { InternalAxiosRequestConfig } from 'axios'
 
 import http from '@/lib/http'
-import { refresh } from '@/service/api'
-import { useAuthStore, useRefreshTokenStore } from '@/modules/authentication'
+import {
+    useAuthStore,
+    useRefreshTokenStore,
+    refreshEndpoint,
+} from '@/modules/authentication'
 
 const useHttp = () => {
     const { access_token } = useAuthStore()
@@ -34,7 +37,9 @@ const useHttp = () => {
                     ) {
                         prevRequest.sent = true
 
-                        const new_access_token = await refresh(getToken())
+                        const new_access_token = await refreshEndpoint(
+                            getToken()
+                        )
 
                         prevRequest.headers.Authorization = `Bearer ${new_access_token}`
                     }

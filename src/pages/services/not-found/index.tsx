@@ -1,7 +1,7 @@
 import React from 'react'
 import Lottie from 'lottie-react'
 
-import { randomFromArr, useConst, useRedirect } from "@modules/common"
+import { randomFromArr, useConst, useRedirect } from '@modules/common'
 import ErrorNotFoundAnimationWithRobot from '@/asset/lottie/ErrorNotFoundAnimationWithPerson.json'
 import ErrorNotFoundAnimationWithPerson from '@/asset/lottie/ErrorNotFoundAnimationWithRobot.json'
 

@@ -1,7 +1,11 @@
 import { create } from 'zustand'
 
 import { useRefreshTokenStore } from './refresh-token'
-import { getUserMetaFromToken, refresh, logout } from '@/service/api'
+import {
+    getUserMetaFromTokenEndpoint,
+    refreshEndpoint,
+    logoutEndpoint,
+} from '@modules/authentication'
 
 type State = {
     checked: boolean
@@ -50,14 +54,14 @@ export const useAuthStore = create<Store>((set, get) => ({
             return set({ checked: true, isPersisting: false })
         }
 
-        const access_token = await refresh(token)
+        const access_token = await refreshEndpoint(token)
 
         if (typeof access_token !== 'string') {
             return set({ checked: true, isPersisting: false })
         }
 
         const userMeta: AppMeta.TUserMeta =
-            await getUserMetaFromToken(access_token)
+            await getUserMetaFromTokenEndpoint(access_token)
 
         set({
             user: userMeta,
@@ -95,7 +99,7 @@ export const useAuthStore = create<Store>((set, get) => ({
         const token = getToken()
 
         setToken(undefined)
-        await logout(token)
+        await logoutEndpoint(token)
 
         reset()
     },

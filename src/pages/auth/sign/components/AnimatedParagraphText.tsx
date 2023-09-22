@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-
 type Props = TComponent<{
     text: string
 }>
@@ -25,7 +24,6 @@ const AnimatedHeadText: React.FC<Props> = ({ text }) => {
         </motion.p>
     )
 }
-
 
 const animatedTextAnimation: Record<string, TAnimation> = {
     child: {

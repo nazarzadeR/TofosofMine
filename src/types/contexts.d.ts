@@ -37,5 +37,11 @@ namespace AppContexts {
         ): void
     }
 
-    type TUtilityContext = {}
+    type TUtilityContext = {
+        setting: {
+            on(): void
+            off(): void
+            toggle(): void
+        }
+    }
 }

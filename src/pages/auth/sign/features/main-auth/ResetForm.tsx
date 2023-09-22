@@ -4,7 +4,7 @@ import { Formik, Form, FormikHelpers } from 'formik'
 import { useTranslation } from 'react-i18next'
 
 import useSignType from '../../store/sign-type'
-import {useApiMutation, useGlobals} from '@modules/common'
+import { useApiMutation, useGlobals } from '@modules/common'
 import { UserEmailSchema } from '../../schema/sign-schema'
 import { Button, EMailIcon, Input } from '@modules/common'
 

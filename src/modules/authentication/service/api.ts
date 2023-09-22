@@ -3,15 +3,15 @@ import { AxiosResponse } from 'axios'
 
 // Util Api function
 
-export async function login(credentials: AppMeta.TSign) {
+export async function loginEndpoint(credentials: AppMeta.TSign) {
     return http.post('auth/login', credentials)
 }
 
-export async function register(credentials: AppMeta.TSign) {
+export async function registerEndpoint(credentials: AppMeta.TSign) {
     return http.post('auth/register', credentials)
 }
 
-export async function refresh(token: string) {
+export async function refreshEndpoint(token: string) {
     let response: AxiosResponse
 
     try {
@@ -23,7 +23,7 @@ export async function refresh(token: string) {
     }
 }
 
-export async function getUserMetaFromToken(token: string) {
+export async function getUserMetaFromTokenEndpoint(token: string) {
     http.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
     const response = await http.get('/user')
@@ -31,7 +31,7 @@ export async function getUserMetaFromToken(token: string) {
     return response.data
 }
 
-export async function logout(token: string) {
+export async function logoutEndpoint(token: string) {
     let response: AxiosResponse
 
     try {

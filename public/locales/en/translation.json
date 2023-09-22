@@ -1,4 +1,8 @@
 {
+    "words": {
+        "theme": "theme",
+        "language": "language"
+    },
     "sign": {
         "head": {
             "login": "Welcome",

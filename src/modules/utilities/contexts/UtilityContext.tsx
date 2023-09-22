@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { SettingsModal } from '..'
 import { useBoolean } from '@modules/common'
 
 const defaultContext = {} as AppContexts.TUtilityContext
@@ -17,10 +18,10 @@ export const UtilityProvider: React.FC<TComponent> = ({ children }) => {
         >
             {children && children}
 
-            {/* <SettingModal
+            <SettingsModal
                 isOpen={isSettingModalOpen}
                 onClose={settingModalActon.off}
-            /> */}
+            />
         </UtilityContext.Provider>
     )
 }

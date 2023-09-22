@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { Formik, Form, FormikHelpers } from 'formik'
 
-import { login } from '@/service/api'
 import useSignType from '../../store/sign-type'
-import { useAuthStore } from '@modules/authentication'
 import { LoginSchema } from '../../schema/sign-schema'
+import { useAuthStore, loginEndpoint } from '@modules/authentication'
 import {
     Input,
     Button,
@@ -23,7 +22,7 @@ const LoginForm = () => {
     const { setAuthWithTokens } = useAuthStore()
     const { goRegister, setRESET, setOTHER } = useSignType()
     const loginMutation = useApiMutation<AppMeta.TSign>({
-        fn: login,
+        fn: loginEndpoint,
     })
 
     const showTooltip = !isUp ? t('warnings.BACKEND_NOT_UP') : undefined
