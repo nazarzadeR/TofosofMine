@@ -25,7 +25,7 @@ const SettingLinks: React.FC<Props> = ({
     const { hasMeta } = useAuthStore()
     const { mode, setMode } = useSettingModal()
 
-    const isSelected = mode === to ? 'bg-slate-200 ' : ''
+    const isSelected = mode === to ? 'bg-slate-200 dark:bg-gray-600' : ''
 
     if (requireAuth && !hasMeta()) return
 

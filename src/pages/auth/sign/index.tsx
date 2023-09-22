@@ -3,7 +3,7 @@ import Lottie from 'lottie-react'
 import { useTranslation } from 'react-i18next'
 
 import Sign from './Sign'
-import Header from './layout/header'
+import { Header } from './layout'
 import { PageLoader } from '@modules/common'
 import useGithubAuth from './hooks/useGithubAuth'
 import AnimatedHeadText from './components/AnimatedHeadText'
