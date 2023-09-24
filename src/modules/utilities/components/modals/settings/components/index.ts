@@ -1,3 +1,5 @@
 export * from './sections'
 export { default as SettingLink } from './SettingLinks'
+export { default as SettingHeader } from './SettingHeader'
 export { default as SettingContent } from './SettingContent'
+export { default as MobileModalBackwardBtn } from './MobileModalBackwardBtn'

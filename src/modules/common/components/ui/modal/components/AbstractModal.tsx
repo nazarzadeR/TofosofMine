@@ -16,7 +16,7 @@ const AbstractModal: React.FC<AppComponent.TAbstractModalProps> = ({
                     <div
                         onClick={onClose}
                         className={twMerge(
-                            'fixed inset-0 z-30 bg-black opacity-40',
+                            'fixed inset-0 z-40 bg-black opacity-40',
                             addOverlayClassName
                         )}
                     />

@@ -5,12 +5,12 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --toastify-color-light: rgb(244 246 248);
     --toastify-color-dark: rgb(48 54 66);
     --toastify-color-info: rgb(69 81 229);
+    --toastify-color-error: rgb(244 67 52);
+    --toastify-color-light: rgb(244 246 248);
     --toastify-color-success: rgb(112 177 79);
     --toastify-color-warning: rgb(255 205 47);
-    --toastify-color-error: rgb(244 67 52);
 }
 
 @layer base {

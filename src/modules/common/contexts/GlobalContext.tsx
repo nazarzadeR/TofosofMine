@@ -16,7 +16,21 @@ export function GlobalProvider({ children }: TComponent) {
     const isUp = useUp()
     const os = useMemo(detectOSInfo, [])
     const isMobileDevice = useMemo(detectMobileDevice, [])
-    const [isSM, isMD, isLG, isXL, isXXL] = useMedia([
+    const [
+        isSM,
+        isMD,
+        isLG,
+        isXL,
+        aboveSM,
+        aboveMD,
+        aboveLG,
+        aboveXL,
+        aboveXXL,
+    ] = useMedia([
+        MEDIA_BREAKPOINTS.MAX_MOBILE,
+        MEDIA_BREAKPOINTS.MAX_TABLET,
+        MEDIA_BREAKPOINTS.MAX_LAPTOP,
+        MEDIA_BREAKPOINTS.MAX_DESKTOP,
         MEDIA_BREAKPOINTS.MOBILE,
         MEDIA_BREAKPOINTS.TABLET,
         MEDIA_BREAKPOINTS.LAPTOP,
@@ -35,7 +49,11 @@ export function GlobalProvider({ children }: TComponent) {
                     isMD,
                     isLG,
                     isXL,
-                    isXXL,
+                    aboveSM,
+                    aboveMD,
+                    aboveLG,
+                    aboveXL,
+                    aboveXXL,
                 },
             }}
         >

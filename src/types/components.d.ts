@@ -4,5 +4,6 @@ namespace AppComponent {
         isOpen: boolean
         addDesktopClassName?: string
         addOverlayClassName?: string
+        MobileLeftCornerComp?: React.ReactNode
     }>
 }

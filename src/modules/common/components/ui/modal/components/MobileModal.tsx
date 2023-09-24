@@ -10,6 +10,7 @@ type TCatchOnDargEvents = {
 
 const MobileModal: React.FC<AppComponent.TAbstractModalProps> = ({
     children,
+    MobileLeftCornerComp,
     ...rest
 }) => {
     const [expanded, setExpanded] = useState(false)
@@ -38,16 +39,21 @@ const MobileModal: React.FC<AppComponent.TAbstractModalProps> = ({
             >
                 <motion.div
                     drag='y'
-                    dragElastic={0}
                     dragDirectionLock
+                    dragElastic={false}
                     onDrag={onDragHandle}
                     onDragEnd={onDragHandle}
                     dragConstraints={{ top: 0, bottom: 0 }}
-                    className='flex h-[20px] w-full items-center justify-center'
+                    className='relative z-[100] flex h-[50px] w-full items-start justify-center'
                 >
-                    <span className='h-[5px] w-[60px] rounded-lg bg-black dark:bg-white ' />
+                    {MobileLeftCornerComp && (
+                        <span className='absolute left-1 block h-full'>
+                            {MobileLeftCornerComp}
+                        </span>
+                    )}
+                    <span className='mt-3 h-[6px] w-[60px] rounded-lg bg-black dark:bg-white ' />
                 </motion.div>
-                <motion.div className='h-full w-full'>
+                <motion.div className='h-full w-full p-2'>
                     {children && children}
                 </motion.div>
             </motion.div>

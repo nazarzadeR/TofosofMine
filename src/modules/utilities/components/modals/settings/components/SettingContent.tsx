@@ -1,22 +1,18 @@
 import React from 'react'
 
-import { useGlobals } from '@/modules/common'
 import { useSettingModal, TSettingMode } from '../store/setting-modal'
-import { MainSection, LanguageSection, ThemeSection } from './sections'
+import { MainSection, GeneralSection, ThemeSection } from './sections'
 
 const settingModeComponents: Record<TSettingMode, React.ComponentType> = {
     MAIN: MainSection,
     THEME: ThemeSection,
-    LANG: LanguageSection,
+    GENERAL: GeneralSection,
 }
 
 const SettingContent = () => {
     const { mode } = useSettingModal()
-    const { screenSize } = useGlobals()
 
-    const Mode = screenSize.isSM
-        ? settingModeComponents['MAIN']
-        : settingModeComponents[mode]
+    const Mode = settingModeComponents[mode]
 
     return (
         <div className='h-full w-full'>

@@ -1,7 +1,8 @@
 {
     "words": {
         "theme": "theme",
-        "language": "language"
+        "language": "language",
+        "general": "general"
     },
     "sign": {
         "head": {

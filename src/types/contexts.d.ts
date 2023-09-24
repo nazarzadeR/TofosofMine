@@ -7,7 +7,11 @@ namespace AppContexts {
             isMD: boolean
             isLG: boolean
             isXL: boolean
-            isXXL: boolean
+            aboveSM: boolean
+            aboveMD: boolean
+            aboveLG: boolean
+            aboveXL: boolean
+            aboveXXL: boolean
         }
         os?:
             | {

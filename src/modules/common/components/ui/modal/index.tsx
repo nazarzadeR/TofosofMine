@@ -6,10 +6,8 @@ import DesktopModal from './components/DesktopModal'
 import { useGlobals } from '@/modules/common'
 
 const Modal: React.FC<AppComponent.TAbstractModalProps> = (props) => {
-    const {
-        screenSize: { isSM },
-    } = useGlobals()
-    const Modal = isSM ? MobileModal : DesktopModal
+    const { screenSize } = useGlobals()
+    const Modal = screenSize.isSM ? MobileModal : DesktopModal
 
     return <Modal {...props} />
 }

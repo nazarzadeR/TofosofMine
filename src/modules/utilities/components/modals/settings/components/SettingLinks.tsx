@@ -30,10 +30,10 @@ const SettingLinks: React.FC<Props> = ({
     if (requireAuth && !hasMeta()) return
 
     return (
-        <div
+        <li
             onClick={() => setMode(to)}
             className={twMerge(
-                'cursor-pointe mx-auto h-max w-full cursor-pointer p-2',
+                'cursor-pointe mx-auto h-max w-full cursor-pointer list-none p-2',
                 className,
                 isSelected
             )}
@@ -48,7 +48,7 @@ const SettingLinks: React.FC<Props> = ({
                     </p>
                 </div>
             )}
-        </div>
+        </li>
     )
 }
 
