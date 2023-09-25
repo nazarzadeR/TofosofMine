@@ -1,9 +1,4 @@
 {
-    "words": {
-        "theme": "theme",
-        "language": "language",
-        "general": "general"
-    },
     "sign": {
         "head": {
             "login": "Welcome",
@@ -68,12 +63,7 @@
             "register": "Already have a account?"
         }
     },
-    "sidebar": {
-        "out": "Logout",
-        "setting": {
-            "setting": "Settings"
-        }
-    },
+    "underConstruction": "This page is under construction",
     "warnings": {
         "BACKEND_NOT_UP": "Please wait a little bit until backend is up"
     },
@@ -81,5 +71,10 @@
         "USER_NOT_FOUND": "Username or password incorrect",
         "SOMETHING_GONE_WRONG": "Unknown error occurred"
     },
-    "underConstruction": "This page is under construction"
+    "words": {
+        "theme": "Theme",
+        "general": "General",
+        "setting": "Settings",
+        "language": "Language"
+    }
 }

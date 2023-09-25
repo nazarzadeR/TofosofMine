@@ -18,7 +18,7 @@ const SignAuthDropdown = () => {
         setting: { on },
     } = useUtility()
 
-    const handleClickWithCloseDropdown = (fn: () => void) => {
+    const handleEventWithCloseDropdown = (fn: () => void) => {
         return () => {
             off()
             fn()
@@ -37,9 +37,9 @@ const SignAuthDropdown = () => {
                 <DropdownMenu isMain>
                     <DropdownMenuItem
                         LeftIcon={<SettingGlobalIcon />}
-                        onClickEvent={handleClickWithCloseDropdown(on)}
+                        onClickEvent={handleEventWithCloseDropdown(on)}
                     >
-                        {t('sidebar.setting.setting')}
+                        {t('words.setting')}
                     </DropdownMenuItem>
                 </DropdownMenu>
             </Dropdown>

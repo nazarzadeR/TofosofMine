@@ -4,7 +4,7 @@ import { useSettingModal, TSettingMode } from '../store/setting-modal'
 import { MainSection, GeneralSection, ThemeSection } from './sections'
 
 const settingModeComponents: Record<TSettingMode, React.ComponentType> = {
-    MAIN: MainSection,
+    SETTING: MainSection,
     THEME: ThemeSection,
     GENERAL: GeneralSection,
 }

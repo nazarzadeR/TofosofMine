@@ -8,13 +8,16 @@ import {
     SettingHeader,
     MobileModalBackwardBtn,
 } from './components'
+import { useSettingModal } from './store/setting-modal'
 
 const SettingModal: React.FC<AppComponent.TAbstractModalProps> = (props) => {
     const { t } = useTranslation()
+    const { mode } = useSettingModal()
 
     return (
         <Modal
             {...props}
+            MobileTitle={t(`words.${mode.toLowerCase()}`)}
             MobileLeftCornerComp={<MobileModalBackwardBtn />}
             addDesktopClassName='h-[60%] md:w-[80%] max-w-[800px]'
         >
@@ -22,7 +25,7 @@ const SettingModal: React.FC<AppComponent.TAbstractModalProps> = (props) => {
                 <div className='primary hidden h-full w-[280px] flex-col items-center justify-between  rounded-l-md sm:flex'>
                     <div className='h-max w-full'>
                         <h3 className='my-2 px-2 text-start text-lg'>
-                            {t('sidebar.setting.setting')}
+                            {t('words.setting')}
                         </h3>
                     </div>
                     <ul className='hidden h-full w-full flex-col sm:flex '>

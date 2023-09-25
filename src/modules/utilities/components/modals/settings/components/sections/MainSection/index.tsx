@@ -4,14 +4,11 @@ import { SettingIcon, ThemeIcon } from '@/modules/common'
 import { useTranslation } from 'react-i18next'
 import MainSettingsLink from './components/MainSettingsLink'
 
-const MainSection = () => {
+const SettingSection = () => {
     const { t } = useTranslation()
     return (
         <div className='flex h-full w-full flex-col gap-2'>
-            <div className='h-max w-full text-center '>
-                <h3 className='text-lg'>{t('sidebar.setting.setting')}</h3>
-            </div>
-            <div className='flex w-full flex-wrap gap-2 justify-center' >
+            <div className='flex w-full flex-wrap justify-center gap-2'>
                 <MainSettingsLink
                     to='GENERAL'
                     name={t('words.general')}
@@ -28,4 +25,4 @@ const MainSection = () => {
     )
 }
 
-export default MainSection
+export default SettingSection

@@ -63,11 +63,12 @@
             "forgot": "Şifrənizi unutmusunuz?"
         }
     },
-    "sidebar": {
-        "out": "Çıxış et",
-        "setting": {
-            "setting": "Tənzimləmələr"
-        }
+
+    "words": {
+        "theme": "Tema",
+        "general": "Ümumi",
+        "setting": "Tənzimləmələr",
+        "language": "Dil"
     },
     "warnings": {
         "BACKEND_NOT_UP": "Zəhmət olmasa bir az gözləyin, backend hazır olana qədər"

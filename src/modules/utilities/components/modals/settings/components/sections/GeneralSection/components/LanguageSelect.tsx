@@ -7,8 +7,8 @@ const LanguageSelect = () => {
     const { t, i18n } = useTranslation()
 
     return (
-        <div className='my-4 flex w-full flex-col gap-1'>
-            <h3 className='capitalize'>{t('words.language')}</h3>
+        <div className='m-1 my-4 flex w-full flex-col gap-1'>
+            <h3 className='ml-2 capitalize'>{t('words.language')}</h3>
             <Select
                 value={i18n.language}
                 onSelect={(lang: any) => i18n.changeLanguage(lang)}

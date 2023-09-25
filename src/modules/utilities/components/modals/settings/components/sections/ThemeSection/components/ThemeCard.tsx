@@ -37,7 +37,7 @@ const ThemeCard: React.FC<Props> = ({
                     primaryClassName
                 )}
             >
-                <p className='ml-2 text-sm text-inherit'>{name}</p>
+                <p className='ml-2 text-sm text-inherit capitalize'>{name}</p>
             </div>
             <div
                 className={twMerge(

@@ -1,7 +1,7 @@
 import { mode } from 'crypto-js'
 import { create } from 'zustand'
 
-export type TSettingMode = 'MAIN' | 'THEME' | 'GENERAL'
+export type TSettingMode = 'SETTING' | 'THEME' | 'GENERAL'
 
 type State = {
     mode: TSettingMode

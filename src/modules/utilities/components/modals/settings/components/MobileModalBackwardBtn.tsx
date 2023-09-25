@@ -10,10 +10,10 @@ const MobileModalBackwardBtn = () => {
     const handleBackMainSection = () => {
         if (screenSize.aboveMD) return
 
-        setMode('MAIN')
+        setMode('SETTING')
     }
 
-    if (screenSize.isSM && mode === 'MAIN') return
+    if (screenSize.isSM && mode === 'SETTING') return
 
     return (
         <span

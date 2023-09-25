@@ -10,6 +10,7 @@ type TCatchOnDargEvents = {
 
 const MobileModal: React.FC<AppComponent.TAbstractModalProps> = ({
     children,
+    MobileTitle,
     MobileLeftCornerComp,
     ...rest
 }) => {
@@ -35,7 +36,7 @@ const MobileModal: React.FC<AppComponent.TAbstractModalProps> = ({
                 initial='initial'
                 variants={mobileModalAnimation}
                 animate={!expanded ? 'enter' : 'expand'}
-                className='secondary fixed  left-1/2 z-50 flex h-[70%] w-[96%] -translate-x-1/2 flex-col rounded-md scrollbar-none'
+                className='secondary fixed  left-1/2 z-50 flex h-[70%] w-[96%] -translate-x-1/2 flex-col gap-2 rounded-md scrollbar-none'
             >
                 <motion.div
                     drag='y'
@@ -44,14 +45,19 @@ const MobileModal: React.FC<AppComponent.TAbstractModalProps> = ({
                     onDrag={onDragHandle}
                     onDragEnd={onDragHandle}
                     dragConstraints={{ top: 0, bottom: 0 }}
-                    className='relative z-[100] flex h-[50px] w-full items-start justify-center'
+                    className='relative z-[100] flex h-[60px] w-full items-end justify-center'
                 >
                     {MobileLeftCornerComp && (
-                        <span className='absolute left-1 block h-full'>
+                        <span className='absolute left-1 top-1/2 block h-full -translate-y-1/2'>
                             {MobileLeftCornerComp}
                         </span>
                     )}
-                    <span className='mt-3 h-[6px] w-[60px] rounded-lg bg-black dark:bg-white ' />
+                    {MobileTitle && (
+                        <h3 className='text-text text-lg capitalize'>
+                            {MobileTitle}
+                        </h3>
+                    )}
+                    <span className='absolute -top-1 mt-3 h-[5px] w-[50px] rounded-lg bg-black dark:bg-white' />
                 </motion.div>
                 <motion.div className='h-full w-full p-2'>
                     {children && children}
